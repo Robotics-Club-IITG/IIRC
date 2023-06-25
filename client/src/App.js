@@ -5,11 +5,13 @@ import CourseScreen from "./screens/CourseScreen";
 function App() {
   
   return (
+    <div className="app">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CourseScreen/>} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 

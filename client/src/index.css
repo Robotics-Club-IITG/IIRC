@@ -6,3 +6,44 @@
   margin: 0;
   padding: 0;
 }
+
+.slideOut-animation {
+  animation-name: slideOut;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  /* 90% {
+    transform: translateX(100%);
+  } */
+  65% {
+    transform: translateX(105%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slideIn-animation {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
