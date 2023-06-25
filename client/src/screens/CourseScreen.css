@@ -1,0 +1,9 @@
+
+.courseScreen__card {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.courseScreen__card::-webkit-scrollbar {
+  display: none;
+}
