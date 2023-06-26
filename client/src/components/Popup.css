@@ -1,0 +1,139 @@
+.popup {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.popup__left {
+  /* width: 50vw; */
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.popup__left_closeButton {
+  margin: 3%;
+}
+
+.popup__left_title {
+  margin: 10% 2%;
+  font-size: clamp(40px, 8vw, 80px);
+  font-family: Furore;
+  line-height: 90%;
+
+}
+
+.popup__left_num {
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  font-size: 400px;
+  font-family: Furore;
+  letter-spacing: -8.16px;
+  position: absolute;
+  bottom: -20.5vh;
+  left: -50px;
+}
+
+.popup__right {
+  /* width: 50vw; */
+  flex: 0.5;
+}
+
+.popup__right::-webkit-scrollbar {
+  display: none;
+}
+
+.popup__right_item>h2 {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 56px;
+  font-family: Furore;
+  line-height: 97%;
+  margin: 10px 0;
+}
+
+.popup__right_item>h1 {
+  margin: 15px 0;
+  color: #000;
+  font-size: 56px;
+  font-family: Furore;
+  line-height: 90%;
+}
+
+.popup__right_item>p {
+  color: #000;
+  /* Body */
+  font-size: 18px;
+  font-family: DM Sans;
+  line-height: 100%;
+  letter-spacing: 0.4px;
+}
+
+.popup__right_weekElement {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+  /* background: rgba(255, 255, 255, 0.35); */
+  background-color: #FFFFFF60;
+}
+
+.popup__right_weekElement>div >h1 {
+  height: 40px;
+  color: #000;
+  font-size: 32px;
+  font-family: Furore;
+  line-height: 90%;
+}
+
+.popup__right_weekElementExpand {
+  /* transition: all 0.3s ease; */
+  max-height: 0;
+  transition: all 0.3s cubic-bezier(0,1,0,1);
+}
+.popup__right_weekElementExpand.show {
+  max-height: 100vh;
+  transition: all 0.3s cubic-bezier(1,0,1,0);
+}
+
+/* regarding popup */
+
+.popup__outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.enter-animation {
+  animation-name: enter;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.exit-animation {
+  animation-name: exit;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes exit {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

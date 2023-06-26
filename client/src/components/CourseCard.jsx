@@ -1,11 +1,9 @@
-/* This is a React component called `CourseCard` that takes in four props: `title`, `cardNo`,
-`bgColor`, and `color`. It renders a card with an image, title, and number. It also includes
-functions to scroll to the previous or next card when the corresponding buttons are clicked. The
-component also imports a CSS file for styling. */
-import React from 'react'
+import React, { useState } from 'react'
 import "./CourseCard.css"
+import Popup from './Popup';
 
 function CourseCard({ title, cardNo, bgColor, color }) {
+  const [expand, setExpand] = useState(false);
   const [title1, title2] = [title.substring(0, title.indexOf(' ')), title.substring(title.indexOf(' ') + 1)];
   const prevCardNo = cardNo !== 1 ? (cardNo - 1) : null;
   const nextCardNo = cardNo !== 5 ? (cardNo + 1) : null;
@@ -50,16 +48,20 @@ function CourseCard({ title, cardNo, bgColor, color }) {
     }, 500);
   };
   return (
-    <div style={{ backgroundColor: bgColor, color: color }} className={`courseCard z-0 ${'courseCard__'+cardNo}`}>
-      {prevCardNo && <img className='courseCard__prevButton' onClick={scrollPrev} src={require(`../assets/cardImage${prevCardNo}.png`)} alt="" />}
-      {nextCardNo && <img className='courseCard__nextButton ' onClick={scrollNext} src={require(`../assets/cardImage${nextCardNo}.png`)} alt="" />}
-      <h1 className='translate-y-8'>{title1}</h1>
-      <img className='w-1/3 z-0 object-contain' src={require(`../assets/cardImage${cardNo}.png`)} alt="" />
-      <h1 className='-translate-y-16 '>
-        {title2}
-        <p style={numStyle}>{`0${cardNo}`}</p>
-      </h1>
-
+    <div className='relative'>
+      <div style={{ backgroundColor: bgColor, color: color }} className={`courseCard z-0 ${'courseCard__' + cardNo}`}>
+        {prevCardNo && <img className='courseCard__prevButton cursor-pointer hover:scale-110 duration-300 ease-in-out' onClick={scrollPrev} src={require(`../assets/cardImage${prevCardNo}.png`)} alt="" />}
+        {nextCardNo && <img className='courseCard__nextButton cursor-pointer hover:scale-110 duration-300 ease-in-out' onClick={scrollNext} src={require(`../assets/cardImage${nextCardNo}.png`)} alt="" />}
+        <h1 onClick={() => setExpand(true)} className='translate-y-8 cursor-pointer'>{title1}</h1>
+        <img onClick={() => setExpand(true)} className='w-1/3 z-0 object-contain cursor-pointer' src={require(`../assets/cardImage${cardNo}.png`)} alt="" />
+        <h1 onClick={() => setExpand(true)} className='-translate-y-16 cursor-pointer '>
+          {title2}
+          <p style={numStyle}>{`0${cardNo}`}</p>
+        </h1>
+      </div>
+      <div className='courseCard__popup' >
+        {<Popup expand={expand} setExpand={setExpand} cardNo={cardNo}/>}
+      </div>
     </div>
   )
 }
