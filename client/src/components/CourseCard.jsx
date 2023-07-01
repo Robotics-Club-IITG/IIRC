@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import "./CourseCard.css"
 import Popup from './Popup';
+import Navbar from './Navbar';
 
 function CourseCard({ title, cardNo, bgColor, color }) {
   const [expand, setExpand] = useState(false);
   const [title1, title2] = [title.substring(0, title.indexOf(' ')), title.substring(title.indexOf(' ') + 1)];
   const prevCardNo = cardNo !== 1 ? (cardNo - 1) : null;
-  const nextCardNo = cardNo !== 5 ? (cardNo + 1) : null;
+  const nextCardNo = cardNo !== 4 ? (cardNo + 1) : null;
   const numStyle = {
     WebkitTextStroke: `2px ${color}`,
     MozTextStroke: `2px ${color}`,
@@ -49,7 +50,10 @@ function CourseCard({ title, cardNo, bgColor, color }) {
   };
   return (
     <div className='relative'>
+
       <div style={{ backgroundColor: bgColor, color: color }} className={`courseCard z-0 ${'courseCard__' + cardNo}`}>
+        <div className="cardNav absolute top-0 left-0 w-full"><Navbar  color={color} bgColor={bgColor} /></div>
+        <div className="separator min-h-[30vh]"></div>
         {prevCardNo && <img className='courseCard__prevButton cursor-pointer hover:scale-110 duration-300 ease-in-out' onClick={scrollPrev} src={require(`../assets/cardImage${prevCardNo}.png`)} alt="" />}
         {nextCardNo && <img className='courseCard__nextButton cursor-pointer hover:scale-110 duration-300 ease-in-out' onClick={scrollNext} src={require(`../assets/cardImage${nextCardNo}.png`)} alt="" />}
         <h1 onClick={() => setExpand(true)} className='translate-y-8 cursor-pointer'>{title1}</h1>
@@ -59,8 +63,8 @@ function CourseCard({ title, cardNo, bgColor, color }) {
           <p style={numStyle}>{`0${cardNo}`}</p>
         </h1>
       </div>
-      <div className='courseCard__popup' >
-        {<Popup expand={expand} setExpand={setExpand} cardNo={cardNo}/>}
+      <div className={`courseCard__popup ${expand ? '':'hidden'}`} >
+        {expand && <Popup expand={expand} setExpand={setExpand} cardNo={cardNo} />}
       </div>
     </div>
   )

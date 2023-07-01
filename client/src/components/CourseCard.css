@@ -11,7 +11,7 @@
 
 .courseCard>h1 {
   text-align: center;
-  font-size: 150px;
+  font-size: clamp(30px,10vw,150px);
   font-family: Furore;
   line-height: 90%;
 }
@@ -20,7 +20,7 @@
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-size: 73px;
+  font-size: clamp(30px,5vw,73px);
   font-family: Furore;
   letter-spacing: -1.46px;
   color: transparent;

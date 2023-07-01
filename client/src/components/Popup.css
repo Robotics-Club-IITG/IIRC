@@ -35,9 +35,11 @@
   font-family: Furore;
   letter-spacing: -8.16px;
   position: absolute;
-  bottom: -20.5vh;
+  max-height: 420px;
+  bottom: 0vh;
   left: -50px;
 }
+
 
 .popup__right {
   /* width: 50vw; */

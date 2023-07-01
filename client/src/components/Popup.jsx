@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import './Popup.css'
 import { popupDetails } from './themeDetails'
 import closeButton from '../assets/close.svg'
+import { courseData } from '../data/courseData';
 
 function Popup({ expand,setExpand, cardNo }) {
   const { title, bgLeft, bgRight, colorLeft } = popupDetails[cardNo - 1];
+  const { para1,para2, extra} = courseData[cardNo - 1];
   const stylesLeft = {
     backgroundColor: bgLeft,
     color: colorLeft
@@ -45,17 +47,19 @@ function Popup({ expand,setExpand, cardNo }) {
     const element = document.querySelector('.popup');
     element.classList.remove('enter-animation');
     element.classList.add('exit-animation');
+    
     setTimeout(() => {
       element.classList.remove('exit-animation');
+      element.remove();
       setExpand(false);
-    }, 500);
+    },400);
     
   }
   return (
     expand ?
       (
         <div className="popup__outer">
-          <div className={`popup ${expand ? 'enter-animation' : 'exit-animation'}`}>
+          <div className={`popup ${expand ? 'enter-animation' : '-translate-y-[100vh]'}`}>
 
             <div style={stylesLeft} className="popup__left">
               <div className="popup__left_closeButton">
@@ -73,7 +77,9 @@ function Popup({ expand,setExpand, cardNo }) {
                 })}
               </div>
               <div className='popup__left_num' style={numStyle}>
+                <p>
                 0{cardNo}
+                </p>
               </div>
             </div>
             <div style={stylesRight} className="popup__right overflow-y-scroll">
@@ -84,10 +90,10 @@ function Popup({ expand,setExpand, cardNo }) {
                   OVERVIEW
                 </h1>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat.
+                <p>{para1}
                   <br /><br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit non expedita cupiditate ipsum in minima quo nesciunt <span className={!showText && 'hidden'}> aperiam dolor, possimus corrupti repellendus dolore nam. Deserunt, nostrum nulla! Quaerat quo saepe eum harum dicta expedita iure itaque, blanditiis voluptatem aliquid voluptate mollitia fugit? Numquam blanditiis, esse voluptatibus nobis minima laudantium vitae sunt! Quidem aut neque maiores omnis nesciunt ad unde iste</span>
-                  {!showText && <button onClick={() => setShowText(true)} className='block underline'><br />Read more</button>}
+                  {para2} <span className={!showText && 'hidden'}> {extra}</span>
+                  {!showText && <button onClick={() => setShowText(true)} className='underline'>.... Read more</button>}
                 </p>
               </div>
               <div className="popup__right_item mt-14 m-10">

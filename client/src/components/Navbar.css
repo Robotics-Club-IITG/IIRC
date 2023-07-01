@@ -1,0 +1,9 @@
+.navbar > ul >li {
+  margin: 0 8px;
+}
+.navbar>ul>li>a {
+  text-align: center;
+  font-size: 28px;
+  font-family: Furore;
+  line-height: 90%;
+}

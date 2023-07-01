@@ -1,7 +1,10 @@
-
 .courseScreen__card {
   display: flex;
   overflow-x: scroll;
+  animation-name: change;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .courseScreen__card::-webkit-scrollbar {
