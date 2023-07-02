@@ -139,3 +139,17 @@
     transform: translateY(100%);
   }
 }
+
+/*  Mobile view */
+
+@media (max-width: 768px) {
+  .popup__left {
+    display: none;
+  }
+  .popup__right {
+    flex: 1;
+  }
+  .mobile_popup_close {
+    display: block;
+  }
+}

@@ -84,6 +84,10 @@ function Popup({ expand,setExpand, cardNo }) {
             </div>
             <div style={stylesRight} className="popup__right overflow-y-scroll">
               <div className="popup__right_item mt-14 m-10">
+                <svg className='cursor-pointer hidden mobile_popup_close' onClick={handleClose} width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.1464 51.3536L19.5 51.7071L19.8536 51.3536L33.5 37.7071L47.1464 51.3536L47.5 51.7071L47.8536 51.3536L51.3536 47.8536L51.7071 47.5L51.3536 47.1464L37.7071 33.5L51.3536 19.8536L51.7071 19.5L51.3536 19.1464L47.8536 15.6464L47.5 15.2929L47.1464 15.6464L33.5 29.2929L19.8536 15.6464L19.5 15.2929L19.1464 15.6464L15.6464 19.1464L15.2929 19.5L15.6464 19.8536L29.2929 33.5L15.6464 47.1464L15.2929 47.5L15.6464 47.8536L19.1464 51.3536Z" fill={colorLeft} stroke={colorLeft} />
+                  <rect x="2" y="2" width="63" height="63" rx="31.5" stroke={colorLeft} stroke-width="4" />
+                </svg>
                 <h2>01</h2>
                 < hr className='border-gray-300 ' />
                 <h1>
@@ -102,7 +106,8 @@ function Popup({ expand,setExpand, cardNo }) {
                 <h1>
                   TASK LIST
                 </h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat.
+                <p>
+                  {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat. */}
                 </p>
                 <div className="popup__right_weekElementContainer space-y-4 my-4">
                   <WeekElement weekNo={'01'} />
@@ -117,7 +122,7 @@ function Popup({ expand,setExpand, cardNo }) {
                   SUBMISSION
                 </h1>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat.
+                <p>Submission <span className="underline">link</span>
                 </p>
               </div>
 

@@ -10,3 +10,16 @@
 .courseScreen__card::-webkit-scrollbar {
   display: none;
 }
+
+/* @media (max-width: 768px) {
+  .courseScreen__card {
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-around;
+
+  }
+  .cardNav {
+    display: none;
+  }
+  
+} */

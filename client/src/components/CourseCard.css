@@ -42,3 +42,23 @@
   top: calc(50vh - 11%);
   right: -10%;
 }
+
+
+/* @media (max-width: 768px) {
+  .separator {
+    min-height: 0vh;
+  }
+  .courseCard > img {
+    display: none;
+  }
+  .courseCard__prevButton, .courseCard__nextButton{
+    display: none;
+  }
+  .courseCard {
+    flex-direction: row;
+  }
+  .courseCard > h1 {
+    display: flex;
+    transform: translate(0);
+  }
+} */

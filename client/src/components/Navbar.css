@@ -1,3 +1,10 @@
+.navbar > h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: Furore;
+  line-height: 90%;
+  color: black;
+}
 .navbar > ul >li {
   margin: 0 8px;
 }
@@ -6,4 +13,20 @@
   font-size: 28px;
   font-family: Furore;
   line-height: 90%;
+}
+
+@media (max-width: 768px) {
+  .navbar > h1 {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+  .navbar>ul {
+    padding: 0 5px;
+  }
+  .navbar li:first-child {
+    display: none;
+  }
+    .navbar>ul>li>a{
+      font-size: 1rem;
+    }
 }
