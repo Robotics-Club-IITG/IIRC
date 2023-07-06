@@ -98,8 +98,9 @@
   transition: all 0.3s cubic-bezier(0,1,0,1);
 }
 .popup__right_weekElementExpand.show {
-  max-height: 100vh;
+  max-height: 200vh;
   transition: all 0.3s cubic-bezier(1,0,1,0);
+  padding-bottom: 0.5rem;
 }
 
 /* regarding popup */

@@ -3,6 +3,7 @@ import './Popup.css'
 import { popupDetails } from './themeDetails'
 import closeButton from '../assets/close.svg'
 import { courseData } from '../data/courseData';
+import YoutubeLink from './YoutubeLink';
 
 function Popup({ expand,setExpand, cardNo }) {
   const { title, bgLeft, bgRight, colorLeft } = popupDetails[cardNo - 1];
@@ -50,29 +51,54 @@ function Popup({ expand,setExpand, cardNo }) {
 							}`}
 						>
 							<h1>{heading}</h1>
-              <br />
-              {resources.map((resource,index) => {
-                let { title , links} = resource;
-                return (
-                  <div>
-                    <h1>&bull; {title}</h1>
-                    {links.map( link => {
-                      return (
-												<div className='pl-1'>
-													<a
-														className="cursor-pointer underline text-gray-500"
-														href={link}
-														target="_blank"
-														rel="noreferrer"
-													>
-														{link}
-													</a>
-												</div>
-											);
-                    })}
-                  </div>
-                )
-              })}
+							<br />
+							<div className='flex flex-col gap-y-2'>
+								{resources.map((resource, index) => {
+									let { title, links } = resource;
+									return (
+										<div>
+											{links.map((link, index) => {
+												if (link.includes("youtu")) {
+													return (
+														<>
+															{index === 0 && (
+																<h1 className="text-lg">&bull; {title}</h1>
+															)}
+															<div className="flex flex-wrap gap-2">
+																{index > 0 && <div>Or</div>}
+																<div className=" pl-1">
+																	<YoutubeLink key={index} link={link} />
+																</div>
+															</div>
+														</>
+													);
+												}
+												return (
+													<>
+														{index > 0 && <div>Or</div>}
+
+														<div className="pl-1 flex gap-2 items-center">
+															{index === 0 && (
+																<h1 className="text-lg inline-block">
+																	&bull; {title} :
+																</h1>
+															)}
+															<a
+																className="cursor-pointer underline text-gray-700"
+																href={link}
+																target="_blank"
+																rel="noreferrer"
+															>
+																link
+															</a>
+														</div>
+													</>
+												);
+											})}
+										</div>
+									);
+								})}
+							</div>
 						</div>
 					}
 				</div>
