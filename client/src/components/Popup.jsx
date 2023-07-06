@@ -85,11 +85,11 @@ function Popup({ expand,setExpand, cardNo }) {
 															)}
 															<a
 																className="cursor-pointer underline text-gray-700"
-																href={link}
+																href={link[1]}
 																target="_blank"
 																rel="noreferrer"
 															>
-																link
+																{link[0]}
 															</a>
 														</div>
 													</>

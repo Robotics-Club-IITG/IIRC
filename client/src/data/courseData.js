@@ -16,7 +16,10 @@ export const courseData = [
 					{
 						title: "Reading Material",
 						links: [
-							"https://machinelearningmastery.com/what-is-computer-vision/",
+							[
+								"A Gentle Introduction to Computer Vision",
+								"https://machinelearningmastery.com/what-is-computer-vision/",
+							],
 						],
 					},
 					{
@@ -72,7 +75,12 @@ export const courseData = [
 					},
 					{
 						title: "Official Documentation",
-						links: ["https://docs.opencv.org/4.x/d9/df8/tutorial_root.html"],
+						links: [
+							[
+								"Documentation",
+								"https://docs.opencv.org/4.x/d9/df8/tutorial_root.html",
+							],
+						],
 					},
 				],
 			},
@@ -95,7 +103,10 @@ export const courseData = [
 					{
 						title: "Resources",
 						links: [
-							"https://docs.google.com/document/d/1yx4xrxlvkQpZQSTaVmZOS2_bMR3N1iiWbZ7VJILVXK4/edit",
+							[
+								"Documentation Link",
+								"https://docs.google.com/document/d/1yx4xrxlvkQpZQSTaVmZOS2_bMR3N1iiWbZ7VJILVXK4/edit",
+							],
 						],
 					},
 				],
@@ -183,19 +194,28 @@ export const courseData = [
 					{
 						title: "Tutorial 1",
 						links: [
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GET-STARTED-IN-FUSION-360",
+							[
+								"Fusion 360 Help | Introduction to Fusion 360 | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GET-STARTED-IN-FUSION-360",
+							],
 						],
 					},
 					{
 						title: "Tutorial 2",
 						links: [
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-DESIGN-SKETCH-BASICS",
+							[
+								"Fusion 360 Help | Sketch basics | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-DESIGN-SKETCH-BASICS",
+							],
 						],
 					},
 					{
 						title: "Tutorial 3",
 						links: [
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-DESIGN-SOLID-BASICS",
+							[
+								"Fusion 360 Help | Solid modeling basics | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-DESIGN-SOLID-BASICS",
+							],
 						],
 					},
 					{
