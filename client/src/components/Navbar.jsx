@@ -14,7 +14,7 @@ function Navbar({ bgColor, color }) {
           <Link to='/leaderboard'>LEADERBOARD</Link>
         </li>
         <li>
-          <Link to='/about'>ABOUT</Link>
+          <Link to='/'>ABOUT</Link>
         </li>
       </ul>
     </nav>

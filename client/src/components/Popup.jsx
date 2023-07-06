@@ -6,7 +6,7 @@ import { courseData } from '../data/courseData';
 
 function Popup({ expand,setExpand, cardNo }) {
   const { title, bgLeft, bgRight, colorLeft } = popupDetails[cardNo - 1];
-  const { para1,para2, extra} = courseData[cardNo - 1];
+  const { para1,para2, extra, weekData} = courseData[cardNo - 1];
   const stylesLeft = {
     backgroundColor: bgLeft,
     color: colorLeft
@@ -23,24 +23,61 @@ function Popup({ expand,setExpand, cardNo }) {
     textStroke: `2px ${colorLeft}`
   };
 
-  const WeekElement = ({ weekNo }) => {
+  const WeekElement = ({ weekNo, index }) => {
     const [showContent, setShowContent] = useState(false);
+    const {heading , resources } = weekData[index];
     const handleClick = () => {
       setShowContent(!showContent);
     }
     return (
-      <div className='popup__right_weekElement px-5 py-2'>
-        <div className='flex items-center'>
-          <h1 className='flex-1 flex items-center'>WEEK {weekNo}</h1>
-          <img onClick={handleClick} className={`text-black w-6 cursor-pointer ${showContent ? 'rotate-45 duration-300' : 'rotate-90 duration-500'}`} src={closeButton} alt="" />
-        </div>
-        <div className='overflow-hidden'>
-          {<p className={`popup__right_weekElementExpand ${showContent ? 'show' : ''}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui ullam, perferendis fuga ab corrupti repellendus accusantium ipsum laborum rerum modi repellat consectetur quo esse unde amet distinctio ea voluptates.
-          </p>}
-        </div>
-      </div>
-    )
+			<div className="popup__right_weekElement px-5 py-2">
+				<div className="flex items-center">
+					<h1 className="flex-1 flex items-center">WEEK {weekNo}</h1>
+					<img
+						onClick={handleClick}
+						className={`text-black w-6 cursor-pointer ${
+							showContent ? "rotate-45 duration-300" : "rotate-90 duration-500"
+						}`}
+						src={closeButton}
+						alt=""
+					/>
+				</div>
+				<div className="overflow-hidden">
+					{
+						<div
+							className={`popup__right_weekElementExpand ${
+								showContent ? "show" : ""
+							}`}
+						>
+							<h1>{heading}</h1>
+              <br />
+              {resources.map((resource,index) => {
+                let { title , links} = resource;
+                return (
+                  <div>
+                    <h1>&bull; {title}</h1>
+                    {links.map( link => {
+                      return (
+												<div className='pl-1'>
+													<a
+														className="cursor-pointer underline text-gray-500"
+														href={link}
+														target="_blank"
+														rel="noreferrer"
+													>
+														{link}
+													</a>
+												</div>
+											);
+                    })}
+                  </div>
+                )
+              })}
+						</div>
+					}
+				</div>
+			</div>
+		);
   }
 
   const handleClose = () => {
@@ -110,9 +147,9 @@ function Popup({ expand,setExpand, cardNo }) {
                   {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat. */}
                 </p>
                 <div className="popup__right_weekElementContainer space-y-4 my-4">
-                  <WeekElement weekNo={'01'} />
-                  <WeekElement weekNo={'02'} />
-                  <WeekElement weekNo={'03'} />
+                  <WeekElement weekNo={'01'} index={0} />
+                  {/* <WeekElement weekNo={'02'} />
+                  <WeekElement weekNo={'03'} /> */}
                 </div>
               </div>
               <div className="popup__right_item mt-14 m-10">

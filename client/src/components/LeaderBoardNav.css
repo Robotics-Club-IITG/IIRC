@@ -8,7 +8,7 @@
 .leaderBoardNav>div {
   color: #000;
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(0.8rem,1.5rem,2rem);
   font-family: Furore;
   font-style: normal;
   font-weight: 400;
@@ -18,4 +18,10 @@
 .active {
   border-radius: 6px;
   border: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+  .leaderBoardNav > div {
+    font-size: 0.8rem;
+  }
 }

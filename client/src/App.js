@@ -6,13 +6,12 @@ import LeaderBoard from "./screens/LeaderBoard";
 import MobileView from "./screens/MobileView";
 
 function App() {
-  
+  const screenWidth = window.innerWidth;
   return (
     <div className="app">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<CourseScreen/>} />
-        <Route path="/mobile" element={<MobileView/>} />
+        <Route path="/" element={screenWidth > 768 ? <CourseScreen/> : <MobileView/>} />
         <Route path="/events" element={<CourseScreen/>} />
         <Route path="/leaderboard" element={< LeaderBoard />} />
         <Route path="/about" element={<Popup expand={true} cardNo={5}/>} />
