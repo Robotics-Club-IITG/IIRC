@@ -52,11 +52,11 @@ function Popup({ expand,setExpand, cardNo }) {
 						>
 							<h1>{heading}</h1>
 							<br />
-							<div className='flex flex-col gap-y-2'>
+							<div className='flex flex-col gap-y-2' key={index}>
 								{resources.map((resource, index) => {
 									let { title, links } = resource;
 									return (
-										<div>
+										<div key={index}>
 											{links.map((link, index) => {
 												if (link.includes("youtu")) {
 													return (
@@ -66,7 +66,7 @@ function Popup({ expand,setExpand, cardNo }) {
 															)}
 															<div className="flex flex-wrap gap-2">
 																{index > 0 && <div>Or</div>}
-																<div className=" pl-1">
+																<div className=" pl-1 ml-2">
 																	<YoutubeLink key={index} link={link} />
 																</div>
 															</div>
@@ -77,14 +77,14 @@ function Popup({ expand,setExpand, cardNo }) {
 													<>
 														{index > 0 && <div>Or</div>}
 
-														<div className="pl-1 flex gap-2 items-center">
+														<div className="pl-1 flex flex-col">
 															{index === 0 && (
-																<h1 className="text-lg inline-block">
+																<h1 className="text-lg block">
 																	&bull; {title} :
 																</h1>
 															)}
 															<a
-																className="cursor-pointer underline text-gray-700"
+																className="cursor-pointer underline text-gray-700 ml-2"
 																href={link[1]}
 																target="_blank"
 																rel="noreferrer"
