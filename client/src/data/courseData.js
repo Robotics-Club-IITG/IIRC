@@ -152,7 +152,10 @@ export const courseData = [
 					},
 					{
 						title: "Tutorial 7",
-						links: ["https://youtu.be/BO42WvuWhlA"],
+						links: [
+							"https://youtu.be/BO42WvuWhlA",
+							"https://www.youtube.com/watch?v=S0j_vuBPi-I&pp=ygUZYW5zeXMgc3BhY2VjbGFpbSBnZW9tZXRyeQ%3D%3D",
+						],
 					},
 				],
 			},
