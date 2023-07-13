@@ -86,7 +86,7 @@ export const courseData = [
 			},
 			{
 				heading:
-					"Things will get spicy this spicy week as we will be learning some exciting topics including feature detection, object tracking, and an introduction to Convolutional Neural Networks.",
+					"Things will get spicy this week as we will be learning some exciting topics including feature detection, object tracking, along with Introduction to Convolutional Neural Networks.",
 				resources: [
 					{
 						title: "Tutorial 1- Feature Detection and Description:",
