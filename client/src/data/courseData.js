@@ -84,7 +84,59 @@ export const courseData = [
 					},
 				],
 			},
-			{},
+			{
+				heading:
+					"Things will get spicy this spicy week as we will be learning some exciting topics including feature detection, object tracking, and an introduction to Convolutional Neural Networks.",
+				resources: [
+					{
+						title: "Tutorial 1- Feature Detection and Description:",
+						links: [
+							"https://www.youtube.com/watch?v=0z3ci5Iak4g",
+							"https://www.youtube.com/watch?v=USl5BHFq2H4",
+						],
+					},
+					{
+						title: "Tutorial 2 - Edge Detection:",
+						links: [
+							"https://www.youtube.com/playlist?list=PL8dDSKArO2-nrqX2CIaK_iTIvTNEM6QLF",
+						],
+					},
+					{
+						title: "Extra Material",
+						links: [
+							"https://www.youtube.com/playlist?list=PL2zRqk16wsdqXEMpHrc4Qnb5rA1Cylrhx",
+						],
+					},
+					{
+						title: "Tutorial 3 -Image Segmentation :",
+						links: [
+							"https://www.youtube.com/watch?v=onWJQY5oFhs&list=PL2zRqk16wsdop2EatuowXBX5C-r2FdyNt",
+						],
+					},
+					{
+						title: "Tutorial 4 -Object Tracking and Flow: ",
+						links: [
+							"https://www.youtube.com/playlist?list=PL2zRqk16wsdoYzrWStffqBAoUY8XdvatV",
+						],
+					},
+					{
+						title: "Extra Material",
+						links: ["https://www.youtube.com/watch?v=GgGro5IV-cs"],
+					},
+					{
+						title: "Tutorial 5 - Intro to Neural Networks: ",
+						links: ["https://www.youtube.com/watch?v=aircAruvnKk"],
+					},
+					{
+						title: "Tutorial 6 - CNN: ",
+						links: [
+							"https://www.youtube.com/watch?v=QzY57FaENXg",
+							"https://www.youtube.com/watch?v=aDpnaxPAmtU&list=RDCMUCh9nVJoWXmFb7sLApWGcLPQ&index=1",
+							"https://www.youtube.com/watch?v=zfiSAzpy9NM&list=RDCMUCh9nVJoWXmFb7sLApWGcLPQ&index=2",
+						],
+					},
+				],
+			},
 			{},
 		],
 	},
@@ -113,6 +165,18 @@ export const courseData = [
 			},
 			{
 				// week2
+				heading: "",
+				resources: [
+					{
+						title: "Resources",
+						links: [
+							[
+								"Documentation Link",
+								"https://docs.google.com/document/d/1mZV5PP3J_277JNucLuArqcUUQGPgOHTEkEMBldWI3_I/edit",
+							],
+						],
+					},
+				],
 			},
 			{
 				// week3
@@ -170,7 +234,54 @@ export const courseData = [
 					},
 				],
 			},
-			{},
+			{
+				heading: "",
+				resources: [
+					{
+						title: "Tutorial 8",
+						links: [
+							"https://www.youtube.com/watch?v=QlwWahqUz2g&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=10&pp=iAQB",
+							"https://youtu.be/-2fmHPz4lN0",
+						],
+					},
+					{
+						title: "Tutorial 9",
+						links: [
+							"https://www.youtube.com/watch?v=tAgCZbiKP6I&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=12&ab_channel=C.Chodhari",
+						],
+					},
+					{
+						title: "Tutorial 10",
+						links: [
+							"https://www.youtube.com/watch?v=ACIE5-WfdrQ&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=13&pp=iAQB",
+						],
+					},
+					{
+						title: "Tutorial 11",
+						links: [
+							"https://www.youtube.com/watch?v=FuX6Fn00OFI&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=14&ab_channel=C.Chodhari",
+						],
+					},
+					{
+						title: "Tutorial 12",
+						links: [
+							"https://www.youtube.com/watch?v=VYvMimIPGp8&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=15&pp=iAQB",
+						],
+					},
+					{
+						title: "Tutorial 13",
+						links: [
+							"https://www.youtube.com/watch?v=nI20uM8JtRg&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=16&ab_channel=C.Chodhari",
+						],
+					},
+					{
+						title: "Tutorial 14",
+						links: [
+							"https://www.youtube.com/watch?v=RnJ6kHibN5M&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=18&ab_channel=C.Chodhari",
+						],
+					},
+				],
+			},
 			{},
 		],
 	},
@@ -232,8 +343,53 @@ export const courseData = [
 					},
 				],
 			},
-			{},
+			{
+				heading:
+					"Very few designs are a single component. This video series focuses on the Fusion 360 tools that enable you to assemble components into complete designs while maintaining the special and functional relationships between components.",
+				resources: [
+					{
+						title: "Tutorial 1",
+						links: [
+							["Fusion 360 Help | Collaboration in distributed designs | Autodesk",
+							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-COLLAB-DISTRIBUTED-DESIGN"],
+						],
+					},
+					{
+						title: "Tutorial 2",
+						links: [
+							["Fusion 360 Help | Mechanical assemblies fundamentals | Autodesk",
+							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-MECHANICAL-ASSEMBLY-FUNDAMENTALS"],
+						],
+					},
+					{
+						title: "Tutorial 3",
+						links: [
+							["Fusion 360 Help | Creating assemblies | Autodesk",
+							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-CREATING-ASSEMBLIES"],
+						],
+					},
+					{
+						title: "Tutorial 4",
+						links: ["https://youtu.be/2R5shLHjXDQ"],
+					},
+					{
+						title: "Tutorial 5",
+						links: ["https://youtu.be/UkGdrTyAaBg"],
+					},
+					{
+						title: "Extra Tutorial",
+						links: ["https://youtu.be/t41QmQszcbE"],
+					},
+				],
+			},
 			{},
 		],
 	},
 ];
+
+
+
+export const taskDetails = {
+	fusionTask1:
+		"https://docs.google.com/document/d/1jnkoqHIMPQYNu7imsmjB_aNyt9bs0bIVa7aSzrhYaEo/edit?usp=sharing",
+};
