@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Popup.css";
 import { popupDetails } from "./themeDetails";
 import closeButton from "../assets/close.svg";
-import { courseData, taskDetails } from "../data/courseData";
+import { Week1Task, courseData } from "../data/courseData";
 import YoutubeLink from "./YoutubeLink";
 
 function Popup({ expand, setExpand, cardNo }) {
@@ -24,7 +24,7 @@ function Popup({ expand, setExpand, cardNo }) {
 		textStroke: `2px ${colorLeft}`,
 	};
 
-	const WeekElement = ({ weekNo, index }) => {
+	const WeekElement = ({ weekNo, index,task }) => {
 		const [showContent, setShowContent] = useState(false);
 		const { heading, resources } = weekData[index];
 		const handleClick = () => {
@@ -99,6 +99,10 @@ function Popup({ expand, setExpand, cardNo }) {
 									);
 								})}
 							</div>
+              {task && <div className="bg-[#00000020] p-4 border rounded-lg border-black mt-2">
+                <h1 className="text-2xl font-bold">Task</h1>
+                <p className="text-lg">Week {weekNo} Task - <a className="underline" href={Week1Task[cardNo-1]} target="_blank" rel="noreferrer">link</a></p>
+                </div>}
 						</div>
 					}
 				</div>
@@ -210,7 +214,7 @@ function Popup({ expand, setExpand, cardNo }) {
 							{/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat. */}
 						</p>
 						<div className="popup__right_weekElementContainer space-y-4 my-4">
-							<WeekElement weekNo={"01"} index={0} />
+							<WeekElement weekNo={"01"} index={0} task={true} />
 							<WeekElement weekNo={"02"} index={1} />
 							{/* <WeekElement weekNo={'02'} />
                   <WeekElement weekNo={'03'} /> */}
@@ -220,24 +224,20 @@ function Popup({ expand, setExpand, cardNo }) {
 						<h2>03</h2>
 						<hr className="border-gray-300" />
 						<h1>SUBMISSION</h1>
-
-						{cardNo === 4 && (
-							<div className="popup__right_weekElement px-5 py-2">
-								<h3 className="text-2xl">
-									<span className="font-bold">Task 1 </span>
-									<span className="italic underline ml-2">
-										<a
-											href={taskDetails.fusionTask1}
-											target="_blank"
-											rel="noreferrer"
-											alt="link"
-										>
-											link
-										</a>
-									</span>
-								</h3>
-							</div>
-						)}
+						<div className="bg-[#00000020] p-4 border rounded-lg border-black mt-2">
+							<h1 className="text-2xl font-bold">Week 01</h1>
+							<p className="text-lg">
+								Task Submission -
+								<a
+									className="underline"
+									href={Week1Task[4]}
+									target="_blank"
+									rel="noreferrer"
+								>
+									link
+								</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
