@@ -33,7 +33,9 @@ function Popup({ expand, setExpand, cardNo }) {
 		return (
 			<div className="popup__right_weekElement px-5 py-2">
 				<div className="flex items-center">
-					<h1 className="flex-1 flex items-center">WEEK {weekNo}</h1>
+					<h1 className="flex-1 flex items-center">
+						{task ? `TASK ${weekNo}` : `WEEK ${weekNo}`}
+					</h1>
 					<img
 						onClick={handleClick}
 						className={`text-black w-6 cursor-pointer ${
@@ -50,65 +52,121 @@ function Popup({ expand, setExpand, cardNo }) {
 								showContent ? "show" : ""
 							}`}
 						>
-							<h1>{heading}</h1>
-							<br />
-							<div className="flex flex-col gap-y-2" key={index}>
-								{resources.map((resource, index) => {
-									let { title, links } = resource;
-									return (
-										<div key={index}>
-											{links.map((link, index) => {
-												if (link.includes("youtu")) {
-													return (
-														<>
-															{index === 0 && (
-																<h1 className="text-lg">&bull; {title}</h1>
-															)}
-															<div className="flex flex-wrap gap-2">
+							{task ? (
+								<div className=" p-4  mt-2">
+									<p className="text-xl">
+										Task{" "}
+										<a
+											className="underline"
+											href={Week1Task[cardNo - 1]}
+											target="_blank"
+											rel="noreferrer"
+										>
+											link
+										</a>
+									</p>
+								</div>
+							) : (
+								<>
+									<h1>{heading}</h1>
+									<br />
+									<div className="flex flex-col gap-y-2" key={index}>
+										{resources.map((resource, index) => {
+											let { title, links } = resource;
+											return (
+												<div key={index}>
+													{links.map((link, index) => {
+														if (link.includes("youtu")) {
+															return (
+																<>
+																	{index === 0 && (
+																		<h1 className="text-lg">&bull; {title}</h1>
+																	)}
+																	<div className="flex flex-wrap gap-2">
+																		{/* {index > 0 && <div>|</div>} */}
+																		<div className=" pl-1 ml-2">
+																			-<YoutubeLink key={index} link={link} />
+																		</div>
+																	</div>
+																</>
+															);
+														}
+														return (
+															<>
 																{/* {index > 0 && <div>|</div>} */}
-																<div className=" pl-1 ml-2">
-																	-<YoutubeLink key={index} link={link} />
-																</div>
-															</div>
-														</>
-													);
-												}
-												return (
-													<>
-														{/* {index > 0 && <div>|</div>} */}
 
-														<div className="pl-1 flex flex-col">
-															{index === 0 && (
-																<h1 className="text-lg block">
-																	&bull; {title} :
-																</h1>
-															)}
-															<a
-																className="cursor-pointer underline text-gray-700 ml-2"
-																href={link[1]}
-																target="_blank"
-																rel="noreferrer"
-															>
-																-{link[0]}
-															</a>
-														</div>
-													</>
-												);
-											})}
-										</div>
-									);
-								})}
-							</div>
-              {task && <div className="bg-[#00000020] p-4 border rounded-lg border-black mt-2">
-                <h1 className="text-2xl font-bold">Task</h1>
-                <p className="text-lg">Week {weekNo} Task - <a className="underline" href={Week1Task[cardNo-1]} target="_blank" rel="noreferrer">link</a></p>
-                </div>}
+																<div className="pl-1 flex flex-col">
+																	{index === 0 && (
+																		<h1 className="text-lg block">
+																			&bull; {title} :
+																		</h1>
+																	)}
+																	<a
+																		className="cursor-pointer underline text-gray-700 ml-2"
+																		href={link[1]}
+																		target="_blank"
+																		rel="noreferrer"
+																	>
+																		-{link[0]}
+																	</a>
+																</div>
+															</>
+														);
+													})}
+												</div>
+											);
+										})}
+									</div>
+								</>
+							)}
 						</div>
 					}
 				</div>
 			</div>
 		);
 	};
+	const TaskSubmissionElement = ({weekNo,link}) => {
+		const [showContent, setShowContent] = useState(false);
+		const handleClick = () => {
+			setShowContent(!showContent);
+		};
+		return (
+			<div className="popup__right_weekElement px-5 py-2">
+				<div className="flex items-center">
+					<h1 className="flex-1 flex items-center">{`TASK ${weekNo}`}</h1>
+					<img
+						onClick={handleClick}
+						className={`text-black w-6 cursor-pointer ${
+							showContent ? "rotate-45 duration-300" : "rotate-90 duration-500"
+						}`}
+						src={closeButton}
+						alt=""
+					/>
+				</div>
+				<div className="overflow-hidden">
+					<div
+						className={`popup__right_weekElementExpand ${
+							showContent ? "show" : ""
+						}`}
+					>
+						<div className=" p-4  mt-2">
+							<p className="text-xl">
+								Task Submission -
+								<a
+									className="underline"
+									href={link}
+									target="_blank"
+									rel="noreferrer"
+								>
+									link
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 
 	const handleClose = () => {
 		const element = document.querySelector(".popup");
@@ -214,6 +272,7 @@ function Popup({ expand, setExpand, cardNo }) {
 							{/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, atque placeat eos nesciunt cumque, officia quis qui deserunt quas totam velit amet earum minus ut! Quae facilis voluptatem alias voluptates nam aliquid cumque ex corporis beatae veritatis cum vitae nihil deleniti voluptatum, porro quisquam necessitatibus ipsa provident voluptatibus non repellat. */}
 						</p>
 						<div className="popup__right_weekElementContainer space-y-4 my-4">
+							<WeekElement weekNo={"01"} index={0} />
 							<WeekElement weekNo={"01"} index={0} task={true} />
 							<WeekElement weekNo={"02"} index={1} />
 							{/* <WeekElement weekNo={'02'} />
@@ -224,20 +283,7 @@ function Popup({ expand, setExpand, cardNo }) {
 						<h2>03</h2>
 						<hr className="border-gray-300" />
 						<h1>SUBMISSION</h1>
-						<div className="bg-[#00000020] p-4 border rounded-lg border-black mt-2">
-							<h1 className="text-2xl font-bold">Week 01</h1>
-							<p className="text-lg">
-								Task Submission -
-								<a
-									className="underline"
-									href={Week1Task[4]}
-									target="_blank"
-									rel="noreferrer"
-								>
-									link
-								</a>
-							</p>
-						</div>
+						<TaskSubmissionElement link={Week1Task[4]} weekNo={"01"} />
 					</div>
 				</div>
 			</div>
