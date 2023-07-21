@@ -137,6 +137,54 @@ export const courseData = [
 					},
 				],
 			},
+			{
+				heading:
+					"Congratulations, You can call yourself a Computer Vision Specialist now. Go on you can brag about it in front of friends. But, the real journey begins from here. So practice well and best of luck for your final task and future endeavors. Hope you enjoyed the coursework!",
+				resources: [
+					{
+						title: "Tutorial 1",
+						links: ["https://youtu.be/ArPaAX_PhIs"],
+					},
+					{
+						title: "Tutorial 2",
+						links: ["https://youtu.be/XuD4C8vJzEQ"],
+					},
+					{
+						title: "Tutorial 3",
+						links: ["https://youtu.be/am36dePheDc"],
+					},
+					{
+						title: "Tutorial 4",
+						links: ["https://youtu.be/smHa2442Ah4"],
+					},
+					{
+						title: "Tutorial 5",
+						links: ["https://youtu.be/KTB_OFoAQcc"],
+					},
+					{
+						title: "Tutorial 6",
+						links: ["https://youtu.be/jPOAS7uCODQ"],
+					},
+					{
+						title: "Tutorial 7",
+						links: ["https://youtu.be/3PyJA9AfwSk"],
+					},
+					{
+						title: "Tutorial 8",
+						links: ["https://youtu.be/8oOgPUO-TBY"],
+					},
+					{
+						title: "Tutorial 9",
+						links: ["https://youtu.be/bXJx7y51cl0"],
+					},
+					{
+						title: "Extra Tutorial",
+						links: [
+							"https://youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF",
+						],
+					},
+				],
+			},
 			{},
 		],
 	},
@@ -180,6 +228,18 @@ export const courseData = [
 			},
 			{
 				// week3
+				heading: "",
+				resources: [
+					{
+						title: "Resources",
+						links: [
+							[
+								"Documentation Link",
+								"https://docs.google.com/document/d/1fDa0qD6duaC5RSNsv6jp48iua_-gtW2sC_Tel-sf8RQ/edit",
+							],
+						],
+					},
+				],
 			},
 		],
 	},
@@ -282,7 +342,31 @@ export const courseData = [
 					},
 				],
 			},
-			{},
+			{
+				heading:
+					"Congratulations, You can call yourself an Ansys Specialist now. Go on you can brag about it in front of friends. But, the real journey begins from here. So practice well and best of luck for your final task and future endeavors. Hope you enjoyed the coursework!",
+				resources: [
+					{
+						title: "Tutorial 15",
+						links: [
+							"https://www.youtube.com/watch?v=N-FwGscw__c&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=19&ab_channel=C.Chodhari",
+						],
+					},
+					{
+						title: "Tutorial 16",
+						links: [
+							"https://www.youtube.com/watch?v=4WPbxu3uplM&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=20&ab_channel=C.Chodhari",
+							"https://www.youtube.com/watch?v=70gtfLsH8QI&list=PLICzjIuc4UqH3hllQc1kEF19YoBfAkEBQ&index=21&ab_channel=C.Chodhari",
+						],
+					},
+					{
+						title: "Tutorial 17",
+						links: [
+							"https://www.youtube.com/watch?v=ExFJkzFNHPU&ab_channel=GraspEngineering",
+						],
+					},
+				],
+			},
 		],
 	},
 	{
@@ -350,22 +434,28 @@ export const courseData = [
 					{
 						title: "Tutorial 1",
 						links: [
-							["Fusion 360 Help | Collaboration in distributed designs | Autodesk",
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-COLLAB-DISTRIBUTED-DESIGN"],
+							[
+								"Fusion 360 Help | Collaboration in distributed designs | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-COLLAB-DISTRIBUTED-DESIGN",
+							],
 						],
 					},
 					{
 						title: "Tutorial 2",
 						links: [
-							["Fusion 360 Help | Mechanical assemblies fundamentals | Autodesk",
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-MECHANICAL-ASSEMBLY-FUNDAMENTALS"],
+							[
+								"Fusion 360 Help | Mechanical assemblies fundamentals | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-MECHANICAL-ASSEMBLY-FUNDAMENTALS",
+							],
 						],
 					},
 					{
 						title: "Tutorial 3",
 						links: [
-							["Fusion 360 Help | Creating assemblies | Autodesk",
-							"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-CREATING-ASSEMBLIES"],
+							[
+								"Fusion 360 Help | Creating assemblies | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-CREATING-ASSEMBLIES",
+							],
 						],
 					},
 					{
@@ -382,7 +472,65 @@ export const courseData = [
 					},
 				],
 			},
-			{},
+			{
+				heading:
+					"Congratulations, You can call yourself a Fusion Specialist now. Go on you can brag about it in front of friends. But, the real journey begins from here. So practice well and best of luck for your final task and future endeavors. Hope you enjoyed the coursework!",
+				resources: [
+					{
+						title: "Tutorial 1",
+						links: ["https://youtu.be/PuWRsVyU3PM"],
+					},
+					{
+						title: "Tutorial 2",
+						links: [
+							[
+								"Fusion 360 Help | Fusion 360 Generative Design (1 of 5) | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GENERATIVE-FUSION-360",
+							],
+						],
+					},
+					{
+						title: "Tutorial 3",
+						links: [
+							[
+								"Fusion 360 Help | Fusion 360 basics for Generative Design (2 of 5) | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GENERATIVE-FUSION-BASICS",
+							],
+						],
+					},
+					{
+						title: "Tutorial 4",
+						links: [
+							[
+								"Fusion 360 Help | Defining a design space (3 of 5) | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GENERATIVE-DESIGN-SPACE",
+							],
+						],
+					},
+					{
+						title: "Tutorial 5",
+						links: [
+							[
+								"Fusion 360 Help | Setting up design requirements (4 of 5) | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GENERATIVE-DESIGN-REQS",
+							],
+						],
+					},
+					{
+						title: "Tutorial 6",
+						links: [
+							[
+								"Fusion 360 Help | Exploring outcomes (5 of 5) | Autodesk",
+								"https://help.autodesk.com/view/fusion360/ENU/courses/AP-C-GENERATIVE-EXPLORE",
+							],
+						],
+					},
+					{
+						title: "Extra Tutorial",
+						links: ["https://www.youtube.com/live/hk4TN8xkSQM?feature=share"],
+					},
+				],
+			},
 		],
 	},
 ];

@@ -275,6 +275,7 @@ function Popup({ expand, setExpand, cardNo }) {
 							<WeekElement weekNo={"01"} index={0} />
 							<WeekElement weekNo={"01"} index={0} task={true} />
 							<WeekElement weekNo={"02"} index={1} />
+							<WeekElement weekNo={"03"} index={2} />
 							{/* <WeekElement weekNo={'02'} />
                   <WeekElement weekNo={'03'} /> */}
 						</div>
