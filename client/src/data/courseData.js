@@ -535,12 +535,19 @@ export const courseData = [
 	},
 ];
 
-
-
-export const Week1Task = [
-	"https://docs.google.com/document/d/16-0DN1IvU9b8s0lsB3iTfQ6PC2urj6EP7FVzABAaZps/edit?usp=sharing",
-	"https://docs.google.com/document/d/1pWgozHe8A__hFGu3-hYFE_ZV_U1qWFXnaCMDpmXEJuo/edit?usp=sharing",
-	"https://docs.google.com/document/d/18Jk1W3aPctpjj4MWXnwKpNV9Ts5nTd0BniPQ5FTi25o/edit?usp=sharing",
-	"https://docs.google.com/document/d/1jnkoqHIMPQYNu7imsmjB_aNyt9bs0bIVa7aSzrhYaEo/edit?usp=sharing",
-	"https://forms.gle/mTfKsfEwrFqWBXPD7",
+export const WeekTask = [
+	[
+		"https://docs.google.com/document/d/16-0DN1IvU9b8s0lsB3iTfQ6PC2urj6EP7FVzABAaZps/edit?usp=sharing",
+		"https://docs.google.com/document/d/1pWgozHe8A__hFGu3-hYFE_ZV_U1qWFXnaCMDpmXEJuo/edit?usp=sharing",
+		"https://docs.google.com/document/d/18Jk1W3aPctpjj4MWXnwKpNV9Ts5nTd0BniPQ5FTi25o/edit?usp=sharing",
+		"https://docs.google.com/document/d/1jnkoqHIMPQYNu7imsmjB_aNyt9bs0bIVa7aSzrhYaEo/edit?usp=sharing",
+		"https://forms.gle/mTfKsfEwrFqWBXPD7",
+	],
+	[
+		"https://forms.gle/mBaNxrajd2w5BGcdA",
+		"https://forms.gle/ZGmkbN9PFyAnqRJ48",
+		"https://forms.gle/KjPPVt6KqKTGyi9y6",
+		"https://forms.gle/y86qtC6grEGjjoG69",
+		"#",
+	],
 ];

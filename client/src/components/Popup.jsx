@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Popup.css";
 import { popupDetails } from "./themeDetails";
 import closeButton from "../assets/close.svg";
-import { Week1Task, courseData } from "../data/courseData";
+import { WeekTask, courseData } from "../data/courseData";
 import YoutubeLink from "./YoutubeLink";
 
 function Popup({ expand, setExpand, cardNo }) {
@@ -58,7 +58,7 @@ function Popup({ expand, setExpand, cardNo }) {
 										Task{" "}
 										<a
 											className="underline"
-											href={Week1Task[cardNo - 1]}
+											href={WeekTask[index][cardNo - 1]}
 											target="_blank"
 											rel="noreferrer"
 										>
@@ -275,16 +275,20 @@ function Popup({ expand, setExpand, cardNo }) {
 							<WeekElement weekNo={"01"} index={0} />
 							<WeekElement weekNo={"01"} index={0} task={true} />
 							<WeekElement weekNo={"02"} index={1} />
+							<WeekElement weekNo={"02"} index={1}  task={true}/>
 							<WeekElement weekNo={"03"} index={2} />
+
 							{/* <WeekElement weekNo={'02'} />
                   <WeekElement weekNo={'03'} /> */}
 						</div>
 					</div>
-					<div className="popup__right_item mt-14 m-10">
+					<div className="popup__right_item mt-14 m-10 space-y-2">
 						<h2>03</h2>
 						<hr className="border-gray-300" />
 						<h1>SUBMISSION</h1>
-						<TaskSubmissionElement link={Week1Task[4]} weekNo={"01"} />
+						<TaskSubmissionElement link={WeekTask[0][4]} weekNo={"01"} />
+						<TaskSubmissionElement link={WeekTask[1][cardNo-1]} weekNo={"02"} />
+
 					</div>
 				</div>
 			</div>
