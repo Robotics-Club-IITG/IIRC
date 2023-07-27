@@ -289,7 +289,7 @@ function Popup({ expand, setExpand, cardNo }) {
 						<h1>SUBMISSION</h1>
 						<TaskSubmissionElement link={WeekTask[0][4]} weekNo={"01"} />
 						<TaskSubmissionElement link={WeekTask[1][cardNo-1]} weekNo={"02"} />
-						<TaskSubmissionElement link={WeekTask[2][cardNo-1]} weekNo={"03"} />
+						<TaskSubmissionElement link={WeekTask[2][4]} weekNo={"03"} />
 
 					</div>
 				</div>
